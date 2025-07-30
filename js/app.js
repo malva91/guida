@@ -112,9 +112,6 @@ class PisaTouristGuide {
     async changeLanguage(language) {
         if (language === this.currentLanguage || this.isLoading) return;
         
-        // Add fade effect
-        document.body.style.opacity = '0.8';
-        
         await this.loadLanguage(language);
         
         // Update language selector
@@ -122,11 +119,6 @@ class PisaTouristGuide {
         if (languageSelect) {
             languageSelect.value = language;
         }
-        
-        // Remove fade effect
-        setTimeout(() => {
-            document.body.style.opacity = '1';
-        }, 200);
     }
     
     showTab(tabName) {
@@ -273,7 +265,6 @@ class PisaTouristGuide {
     createPlaceCard(place, index) {
         const card = document.createElement('div');
         card.className = 'card';
-        card.style.animationDelay = `${index * 0.1}s`;
         
         const imageUrl = place.image || `https://images.pexels.com/photos/${1000000 + index}/pexels-photo-${1000000 + index}.jpeg?auto=compress&cs=tinysrgb&w=400`;
         
@@ -318,7 +309,6 @@ class PisaTouristGuide {
     createEventCard(event, index) {
         const card = document.createElement('div');
         card.className = 'card';
-        card.style.animationDelay = `${index * 0.1}s`;
         
         const imageUrl = event.image || `https://images.pexels.com/photos/${2000000 + index}/pexels-photo-${2000000 + index}.jpeg?auto=compress&cs=tinysrgb&w=400`;
         
@@ -363,7 +353,6 @@ class PisaTouristGuide {
     createTipCard(category, index) {
         const card = document.createElement('div');
         card.className = 'tip-card';
-        card.style.animationDelay = `${index * 0.1}s`;
         
         const tipsList = category.tips.map(tip => `<li>${tip}</li>`).join('');
         
@@ -400,10 +389,8 @@ class PisaTouristGuide {
         
         if (scrolled) {
             header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 4px 20px rgba(75, 58, 47, 0.1)';
         } else {
             header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
         }
     }
     
@@ -424,59 +411,10 @@ class PisaTouristGuide {
     }
 }
 
-// Utility functions
-const utils = {
-    // Smooth reveal animation on scroll
-    revealOnScroll() {
-        const cards = document.querySelectorAll('.card, .tip-card, .sponsor-card');
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-        
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(card);
-        });
-    },
-    
-    // Lazy load images
-    lazyLoadImages() {
-        const images = document.querySelectorAll('[data-src]');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        images.forEach(img => imageObserver.observe(img));
-    }
-};
-
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize main app
     window.pisaGuide = new PisaTouristGuide();
-    
-    // Initialize utility functions after content is loaded
-    setTimeout(() => {
-        utils.revealOnScroll();
-        utils.lazyLoadImages();
-    }, 1000);
 });
 
 // Handle offline functionality
@@ -490,5 +428,5 @@ window.addEventListener('offline', () => {
 
 // Export for potential external use
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { PisaTouristGuide, utils };
+    module.exports = { PisaTouristGuide };
 }
