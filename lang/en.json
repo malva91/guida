@@ -2,11 +2,11 @@
   "meta": {
     "title": "Pisa Tourist Guide - Discover the city with Il Barrino da Mario",
     "nav_title": "Pisa Guide",
-    "sponsored_by": "Sponsored by Il Barrino da Mario"
+    "sponsored_by": "Sponsored by Il Barrino"
   },
   "hero": {
-    "headline": "Discover Pisa with the authentic taste of Il Barrino da Mario",
-    "subtitle": "A local, warm and useful guide for your visit to the city of the Leaning Tower"
+    "headline": "Discover Pisa with Il Barrino",
+    "subtitle": "A local guide for your visit to the city of the Leaning Tower"
   },
   "menu": {
     "home": "Home",
@@ -15,23 +15,22 @@
     "tips": "Tips"
   },
   "sponsor": {
-    "name": "Il Barrino da Mario",
-    "description": "Since 1952, authentic Tuscan cuisine in the heart of Pisa. A gastronomic experience that tells the story of Pisan culinary tradition through recipes passed down from generation to generation.",
-    "address": "Via del Borgo, 15 - Pisa",
-    "phone": "+39 050 123456",
-    "hours": "Daily 12:00-15:00 / 19:00-23:00",
+    "name": "Il Barrino",
+    "description": "Since 1970, the reference kiosk bar in the heart of Pisa. An authentic meeting point where you can enjoy coffee, aperitifs and snacks in a familiar and welcoming atmosphere.",
+    "address": "Via Cardinale Maffi 56, Pisa",
+    "email": "info@ilbarrino.it",
+    "hours": "Daily 07:00-20:00",
     "features": [
-      "Traditional Tuscan cuisine since 1952",
-      "Fresh and local ingredients",
+      "Kiosk bar since 1970",
+      "Quality coffee and aperitifs",
       "Family-friendly and welcoming atmosphere",
-      "House specialties prepared with passion",
-      "Wine cellar with local wines"
+      "Meeting point in the center of Pisa"
     ],
-    "menu_button": "Discover our Menu",
-    "menu_message": "Contact us at +39 050 123456 to discover our daily menu with fresh specialties and traditional Tuscan dishes!",
+    "menu_button": "Come visit us",
+    "menu_message": "Write to us at info@ilbarrino.it for more information about our services!",
     "labels": {
       "address": "Address",
-      "phone": "Phone",
+      "email": "Email",
       "hours": "Hours"
     }
   },
@@ -249,9 +248,9 @@
     ]
   },
   "footer": {
-    "sponsor_description": "Authentic Tuscan taste since 1952",
+    "sponsor_description": "Your kiosk bar since 1970",
     "follow_us": "Follow Us",
-    "copyright": "© 2025 Pisa Tourist Guide - Sponsored by Il Barrino da Mario"
+    "copyright": "© 2025 Pisa Tourist Guide - Sponsored by Il Barrino"
   },
   "common": {
     "view_map": "View Map",

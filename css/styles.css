@@ -31,6 +31,7 @@
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
   --transition-slow: 0.5s ease;
+--transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset and Base Styles */
@@ -51,6 +52,7 @@ body {
   color: var(--text-dark);
   background-color: var(--col-beige);
   overflow-x: hidden;
+  transition: opacity var(--transition-smooth);
 }
 
 /* Typography */
@@ -76,7 +78,7 @@ p {
 a {
   color: var(--col-dark-brown);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-smooth);
 }
 
 a:hover {
@@ -139,7 +141,7 @@ a:hover {
   color: var(--text-dark);
   padding: var(--space-xs) var(--space-md);
   border-radius: var(--radius-lg);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
   border: 2px solid transparent;
   background: transparent;
   cursor: pointer;
@@ -169,7 +171,7 @@ a:hover {
   font-size: 0.9rem;
   color: var(--text-dark);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
 }
 
 .lang-select:hover, .lang-select:focus {
@@ -189,7 +191,7 @@ a:hover {
   width: 25px;
   height: 3px;
   background-color: var(--col-dark-brown);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
 }
 
 .hamburger.active span:nth-child(1) {
@@ -462,7 +464,7 @@ a:hover {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 8px 30px var(--shadow-light);
-  transition: all var(--transition-medium);
+  transition: all var(--transition-smooth);
   position: relative;
 }
 
@@ -544,7 +546,7 @@ a:hover {
   padding: var(--space-sm) var(--space-lg);
   border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
   border: 2px solid transparent;
   font-weight: 500;
 }
@@ -665,7 +667,7 @@ a:hover {
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
   box-shadow: 0 8px 30px var(--shadow-light);
-  transition: all var(--transition-medium);
+  transition: all var(--transition-smooth);
 }
 
 .tip-card:hover {
@@ -745,7 +747,7 @@ a:hover {
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.2rem;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
 }
 
 .social-link:hover {
@@ -774,7 +776,7 @@ a:hover {
   align-items: center;
   z-index: 9999;
   opacity: 1;
-  transition: opacity var(--transition-slow);
+  transition: opacity var(--transition-smooth);
 }
 
 .loading.hidden {
@@ -813,7 +815,7 @@ a:hover {
     flex-direction: column;
     justify-content: start;
     padding: var(--space-lg);
-    transition: left var(--transition-medium);
+    transition: left var(--transition-smooth);
     box-shadow: 0 4px 20px var(--shadow-medium);
     z-index: 999;
   }

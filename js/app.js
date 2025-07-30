@@ -113,7 +113,7 @@ class PisaTouristGuide {
         if (language === this.currentLanguage || this.isLoading) return;
         
         // Add fade effect
-        document.body.style.opacity = '0.7';
+        document.body.style.opacity = '0.8';
         
         await this.loadLanguage(language);
         
@@ -126,7 +126,7 @@ class PisaTouristGuide {
         // Remove fade effect
         setTimeout(() => {
             document.body.style.opacity = '1';
-        }, 300);
+        }, 200);
     }
     
     showTab(tabName) {
@@ -221,12 +221,12 @@ class PisaTouristGuide {
             'sponsor-name': sponsor.name,
             'sponsor-description': sponsor.description,
             'sponsor-address': sponsor.address,
-            'sponsor-phone': sponsor.phone,
+            'sponsor-email': sponsor.email,
             'sponsor-hours': sponsor.hours,
             'contact-address-label': sponsor.labels?.address,
-            'contact-phone-label': sponsor.labels?.phone,
+            'contact-email-label': sponsor.labels?.email,
             'contact-hours-label': sponsor.labels?.hours,
-            'menu-button-text': sponsor.menu_button || 'Scopri il nostro Menu'
+            'menu-button-text': sponsor.menu_button || 'Vieni a trovarci'
         };
         
         Object.entries(elements).forEach(([id, text]) => {
@@ -243,16 +243,6 @@ class PisaTouristGuide {
                 featureElement.className = 'feature-item';
                 featureElement.textContent = feature;
                 featuresContainer.appendChild(featureElement);
-            });
-        }
-        
-        // Setup menu button click handler
-        const menuButton = document.getElementById('menu-button');
-        if (menuButton) {
-            menuButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Here you can add logic to show menu modal or redirect
-                alert(this.data.sponsor?.menu_message || 'Contattaci per scoprire il nostro menu del giorno!');
             });
         }
     }
@@ -429,7 +419,7 @@ class PisaTouristGuide {
         if (loading) {
             setTimeout(() => {
                 loading.classList.add('hidden');
-            }, 500);
+            }, 300);
         }
     }
 }
@@ -454,7 +444,7 @@ const utils = {
         cards.forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transition = 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
             observer.observe(card);
         });
     },

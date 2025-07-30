@@ -2,11 +2,11 @@
   "meta": {
     "title": "Guida Turistica di Pisa - Scopri la città con Il Barrino da Mario",
     "nav_title": "Pisa Guide",
-    "sponsored_by": "Offerta da Il Barrino da Mario"
+    "sponsored_by": "Offerto da Il Barrino"
   },
   "hero": {
-    "headline": "Scopri Pisa con il gusto autentico de Il Barrino da Mario",
-    "subtitle": "Una guida locale, calda e utile per la tua visita alla città della Torre Pendente"
+    "headline": "Scopri Pisa con Il Barrino",
+    "subtitle": "Una guida locale per la tua visita alla città della Torre Pendente"
   },
   "menu": {
     "home": "Home",
@@ -15,23 +15,22 @@
     "tips": "Consigli"
   },
   "sponsor": {
-    "name": "Il Barrino da Mario",
-    "description": "Dal 1952, autentica cucina toscana nel cuore di Pisa. Un'esperienza gastronomica che racconta la tradizione culinaria pisana attraverso ricette tramandate di generazione in generazione.",
-    "address": "Via del Borgo, 15 - Pisa",
-    "phone": "+39 050 123456",
-    "hours": "Tutti i giorni 12:00-15:00 / 19:00-23:00",
+    "name": "Il Barrino",
+    "description": "Dal 1970, il chiosco bar di riferimento nel cuore di Pisa. Un punto di ritrovo autentico dove gustare caffè, aperitivi e snack in un'atmosfera familiare e accogliente.",
+    "address": "Via Cardinale Maffi 56, Pisa",
+    "email": "info@ilbarrino.it",
+    "hours": "Tutti i giorni 07:00-20:00",
     "features": [
-      "Cucina tradizionale toscana dal 1952",
-      "Ingredienti freschi e locali",
+      "Chiosco bar dal 1970",
+      "Caffè e aperitivi di qualità",
       "Ambiente familiare e accogliente",
-      "Specialità della casa preparate con passione",
-      "Cantina con vini del territorio"
+      "Punto di ritrovo nel centro di Pisa"
     ],
-    "menu_button": "Scopri il nostro Menu",
-    "menu_message": "Contattaci al +39 050 123456 per scoprire il nostro menu del giorno con specialità fresche e piatti della tradizione toscana!",
+    "menu_button": "Vieni a trovarci",
+    "menu_message": "Scrivici a info@ilbarrino.it per maggiori informazioni sui nostri servizi!",
     "labels": {
       "address": "Indirizzo",
-      "phone": "Telefono",
+      "email": "Email",
       "hours": "Orari"
     }
   },
@@ -249,9 +248,9 @@
     ]
   },
   "footer": {
-    "sponsor_description": "Autentico gusto toscano dal 1952",
+    "sponsor_description": "Il tuo chiosco bar dal 1970",
     "follow_us": "Seguici",
-    "copyright": "© 2025 Guida Turistica di Pisa - Sponsorizzato da Il Barrino da Mario"
+    "copyright": "© 2025 Guida Turistica di Pisa - Sponsorizzato da Il Barrino"
   },
   "common": {
     "view_map": "Visualizza Mappa",
